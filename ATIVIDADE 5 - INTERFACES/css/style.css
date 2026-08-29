@@ -1,0 +1,267 @@
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-image: url("../images/guitarra_fundo_body.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.pagina {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #c87979;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    height: 180px;
+    background-image: url("../images/guitarras_header.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.menu {
+    width: 480px;
+    height: 36px;
+    display: flex;
+    position: absolute;
+    right: 60px;
+    bottom: 20px;
+    background-color: white;
+}
+
+.menu a {
+    width: 96px;
+    padding: 11px 3px;
+    color: #4b3030;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #eeeeee;
+}
+
+/* Primeira seção */
+.apresentacao {
+    min-height: 370px;
+    padding: 35px 52px;
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    background-color: #cc0707;
+}
+
+.caixa-texto,
+.caixa-endereco {
+    color: white;
+    background-color: #bd8d8d;
+}
+
+.caixa-texto {
+    width: 520px;
+    min-height: 285px;
+    padding: 28px;
+}
+
+.caixa-texto h1,
+.caixa-endereco h2 {
+    margin: 0 0 35px;
+    font-size: 23px;
+}
+
+.caixa-texto p,
+.caixa-endereco p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.foto-loja {
+    width: 520px;
+    height: 275px;
+    object-fit: cover;
+}
+
+/* Lista de produtos */
+.produtos {
+    min-height: 370px;
+    padding: 25px 45px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eefcff;
+}
+
+.produto {
+    width: 225px;
+    height: 315px;
+    padding: 25px 8px;
+    text-align: center;
+    background-color: white;
+}
+
+.produto img {
+    width: 150px;
+    height: 135px;
+    object-fit: contain;
+}
+
+.produto p {
+    margin: 15px 0 0;
+    font-size: 14px;
+}
+
+.produto strong {
+    color: red;
+    font-size: 16px;
+}
+
+/* Mapa e endereço */
+.localizacao {
+    min-height: 385px;
+    padding: 30px 40px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    background-color: #c55705;
+}
+
+.localizacao iframe {
+    width: 570px;
+    height: 275px;
+    border: 0;
+    border-radius: 7px;
+}
+
+.caixa-endereco {
+    width: 520px;
+    min-height: 285px;
+    padding: 30px;
+}
+
+/* Contato */
+.contato {
+    min-height: 390px;
+    margin: 12px 24px;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.contato form {
+    width: 490px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato label {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.contato input {
+    height: 40px;
+    margin-bottom: 18px;
+    padding: 8px;
+}
+
+.contato textarea {
+    width: 290px;
+    height: 140px;
+    margin-bottom: 20px;
+    padding: 8px;
+    resize: none;
+}
+
+.contato button {
+    height: 40px;
+}
+
+.redes {
+    width: 470px;
+    margin-top: 75px;
+    text-align: center;
+}
+
+.redes h2 {
+    color: #000091;
+    font-size: 23px;
+}
+
+.icones-grandes {
+    display: flex;
+    justify-content: center;
+}
+
+.icones-grandes img {
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    object-fit: contain;
+}
+
+/* Rodapé */
+footer {
+    min-height: 140px;
+    padding: 22px;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+footer p {
+    margin: 2px 0 10px;
+}
+
+.icones-rodape img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
+/* Ajuste simples para telas menores */
+@media (max-width: 800px) {
+    .menu {
+        width: 100%;
+        right: 0;
+    }
+
+    .menu a {
+        width: 20%;
+    }
+
+    .apresentacao,
+    .produtos,
+    .localizacao,
+    .contato {
+        flex-direction: column;
+    }
+
+    .caixa-texto,
+    .foto-loja,
+    .localizacao iframe,
+    .caixa-endereco,
+    .contato form,
+    .redes {
+        width: 100%;
+    }
+
+    .produto {
+        width: 90%;
+    }
+}
