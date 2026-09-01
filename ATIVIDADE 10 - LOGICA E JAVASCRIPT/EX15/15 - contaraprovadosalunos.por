@@ -2,30 +2,32 @@ programa
 {
     funcao inicio()
     {
-        real valorCompra
-        real valorFinal
+        inteiro aluno
+        inteiro aprovados = 0
+        real media
 
-        escreva("Digite o valor da compra: ")
-        leia(valorCompra)
-
-        se (valorCompra > 200)
+        para (aluno = 1; aluno <= 5; aluno++)
         {
-            valorFinal = valorCompra - (valorCompra * 0.15)
-        }
-        senao
-        {
-            valorFinal = valorCompra - (valorCompra * 0.05)
+            escreva("Digite a média do aluno ", aluno, ": ")
+            leia(media)
+
+            se (media >= 6)
+            {
+                aprovados = aprovados + 1
+            }
         }
 
-        escreva("Valor final: R$ ", valorFinal)
+        escreva("\nTotal de alunos aprovados: ", aprovados)
     }
 }
+
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 421; 
+ * @POSICAO-CURSOR = 0; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
